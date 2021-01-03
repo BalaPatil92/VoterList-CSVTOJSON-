@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+    <ion-title>
+      Voter List
+    </ion-title>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Filter Schedules" [(ngModel)]="term" animated="true" color="medium"></ion-searchbar>
+  </ion-toolbar>
+<ion-list>
+  <ion-item *ngFor="let data of csvData | filter:term ">
+    <ion-avatar slot="start">
+      <img height="100" width="100" src="https://eci.gov.in/uploads/monthly_2019_04/719230437_voterhelplinelogo-01.png.57b196191e8e2fc879c30ea60396c4b4.png">
+    </ion-avatar>
+    <ion-label>
+      <h2>मतदाराचे नाव - {{data.voterName}}</h2>
+      <p>वडिलांचे नाव - {{data.fatherName}}</p>
+      <p>वय - {{data.age}}</p>
+      <p>लिंग - {{data.gender}}</p>
+      <p>पतीचे नाव - {{data.husbandName}}</p>
+    </ion-label>
+  </ion-item>
+
+
+  </ion-list>
+</ion-content>

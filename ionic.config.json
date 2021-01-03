@@ -1,0 +1,7 @@
+{
+  "name": "voterListBlank",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
